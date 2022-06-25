@@ -1,5 +1,6 @@
 import { FormEvent, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { CodeMockup } from "../components/CodeMockup";
 import { Logo } from "../components/Logo";
 import { ReactLogo } from "../components/ReactLogo";
 import { useCreateSubscriberMutation } from "../graphql/generated";
@@ -37,11 +38,6 @@ export function Subscribe() {
   return (
     <div className="min-h-screen relative flex flex-col item-center bg-gradient-to-t from-gray-50">
       <ReactLogo />
-      {/* <img
-        
-        src="/src/assets/logo-react.svg"
-        alt="Logo do React"
-      /> */}
 
       <div className="w-full max-w-[1100px] flex items-center justify-between mt-20 mx-auto z-10">
         <div className="max-w-[640px]">
@@ -67,14 +63,14 @@ export function Subscribe() {
             onSubmit={handleSubscribe}
           >
             <input
-              className="bg-gray-200 rounded px-4 h-14"
+              className="bg-gray-200 rounded px-4 h-12"
               type="text"
               placeholder="Seu nome completo"
               onChange={event => setName(event.currentTarget.value)}
               value={name}
             />
             <input
-              className="bg-gray-200 rounded px-4 h-14"
+              className="bg-gray-200 rounded px-4 h-12"
               type="email"
               placeholder="Digite seu e-mail"
               onChange={event => setEmail(event.currentTarget.value)}
@@ -82,7 +78,7 @@ export function Subscribe() {
             />
 
             <button
-              className="mt-4 bg-green-500 uppercase py-4 rounded font-bold text-sm hover:bg-green-600 transition-colors disabled:opacity-40"
+              className="mt-4 bg-green-500 uppercase py-4 rounded font-bold text-gray-800 text-xs font-nunito hover:bg-green-600 transition-colors disabled:opacity-40"
               type="submit"
               disabled={loading}
             >
@@ -92,10 +88,7 @@ export function Subscribe() {
         </div>
       </div>
 
-      <img
-        className="max-w-[1100px] mx-auto z-10"
-        src="/src/assets/code-mockup.png"
-        alt="" />
+      <CodeMockup />
     </div>
   )
 }
