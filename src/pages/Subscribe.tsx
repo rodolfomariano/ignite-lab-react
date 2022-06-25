@@ -1,6 +1,7 @@
 import { FormEvent, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Logo } from "../components/Logo";
+import { ReactLogo } from "../components/ReactLogo";
 import { useCreateSubscriberMutation } from "../graphql/generated";
 
 
@@ -35,11 +36,12 @@ export function Subscribe() {
 
   return (
     <div className="min-h-screen relative flex flex-col item-center bg-gradient-to-t from-gray-50">
-      <img
-        className="h-[540px] absolute left-1/2 transform -translate-x-1/2 "
+      <ReactLogo />
+      {/* <img
+        
         src="/src/assets/logo-react.svg"
         alt="Logo do React"
-      />
+      /> */}
 
       <div className="w-full max-w-[1100px] flex items-center justify-between mt-20 mx-auto z-10">
         <div className="max-w-[640px]">
