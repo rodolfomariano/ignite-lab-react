@@ -21,7 +21,7 @@ export function LessonsCard({ title, slugProp, availableAt, type }: LessonProps)
   const isActiveLesson = slug === slugProp
 
   return (
-    <Link to={`/event/lesson/${slugProp}`} className='group'>
+    <Link to={`/event/lesson/${slugProp}`} className={`group ${!isLessonAvailable ? 'pointer-events-none cursor-not-allowed opacity-60 ' : 'pointer-events-auto'} `}>
       <span className="text-gray-600 text-sm">
         {availableDateFormatted}
       </span>
