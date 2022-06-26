@@ -41,7 +41,7 @@ module.exports = {
         sans: 'Roboto, sans-serif',
         'nunito': 'Nunito, sans-serif',
         'roboto': 'Roboto, sans-serif'
-      }
+      },
     },
   },
   plugins: [],
