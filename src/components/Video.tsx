@@ -79,7 +79,7 @@ export function Video({ lessonSlug }: VideoProps) {
           </div>
         </div>
 
-        <div className="gap-8 mt-20 grid laptop:grid-cols-2" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(450px, 1fr))' }}>
+        <div className="gap-8 mt-20 grid grid-cols-2" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(450px, 1fr))' }}>
           <a
             className="group bg-gray-100 rounded overflow-hidden flex items-stretch gap-6 drop-shadow-xl hover:drop-shadow-md transition-all"
             href="#"
